@@ -9,7 +9,17 @@
     </head>
 <body>
     
-    <div id="log"></div>
+    <div id="log">
+        <form name="introForm">
+            <label>Name:</label>
+            <input name="username" placeholder="Choose Your Name, Weapon">
+            <label>Starting Strength:</label>
+            <input name="atk" value="10" type="number" min="10" max="20">
+            <button> Start Game </button>
+        </form>
+    </div>
+
+
     <div id="stats"> 
         <p id="playerName"></p>
         <p id="playerHealth"></p>
@@ -17,6 +27,7 @@
         <p id="playerSpeed"></p>
         <p id="playerPotion"></p>
     </div>
+
     <div id="enemyStats">
         <p id="enemyName"></p>
         <p id="enemyHealth"></p>

@@ -4,6 +4,18 @@ const moveBtn = document.getElementById('moveBtn')
 const healBtn = document.getElementById('healBtn')
 const runBtn = document.getElementById('runBtn')
 const statsDiv = document.getElementById('stats')
+const introForm = document.introForm
+
+introForm.addEventListener('submit', function(event){
+    event.preventDefault() // this overrides page refresh on submit
+    player.name = introForm.username.value
+    // player.hp = +introForm.hp.value
+    introForm.reset()
+    updatePlayerStats()
+
+    //conditional rendering. hidden reserves the space, display: none does not reserve space 
+    introForm.style.display = 'none'
+})
 
 function createMessage(text){
     const message = document.createElement('p')
@@ -90,7 +102,7 @@ function handleAttack(enemy){
         attacksFirst = player.name
     } else{
         const randomChance = Math.random()
-        if(random.Chance < .5){
+        if(randomChance < .5){
             attacksFirst = enemy.name
         } else{
             attacksFirst = player.name
