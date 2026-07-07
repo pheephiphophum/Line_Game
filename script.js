@@ -9,7 +9,7 @@ const introForm = document.introForm
 introForm.addEventListener('submit', function(event){
     event.preventDefault() // this overrides page refresh on submit
     player.name = introForm.username.value
-    // player.hp = +introForm.hp.value
+    player.attackPwr = +introForm.attackPwr.value
     introForm.reset()
     updatePlayerStats()
 
